@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .payment-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <h2>Payment Details</h2>
+        <label for="email">Email address:</label>
+        <input type="email" id="email" placeholder="e.g. john@example.com" required>
+
+        <label for="cardNumber">Card number:</label>
+        <input type="text" id="cardNumber" placeholder="1234 1234 1234 1234" required>
+
+        <label for="expiration">Expiration (MM/YY):</label>
+        <input type="text" id="expiration" placeholder="MM/YY" required>
+        <label for="CVC">CVC</label>
+        <input type="text" id="CVC" placeholder="CVC" required>
+
+        <label for="cardholderName">Cardholder name</label>
+        <input type="text" id="cardholderName" placeholder="John More Doe" required>
+
+        <label for="billingAddress">Billing address</label>
+        <input type="text" id="billingAddress" placeholder="India" required>
+
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" required>
+
+        <label for="taxId">Tax ID number (optional)</label>
+        <input type="text" id="taxId">
+
+        <p>Subtotal: $19.00</p>
+        <p>Total: $19.00</p>
+
+        <button onclick="pay()">Pay $19.00</button>
+    </div>
+
+    <script>
+        function pay() {
+            // Add your payment processing logic here
+            alert('Payment successful!');
+        }
+    </script>
+</body>
+</html>
